@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>5</version>
+    </parent>
+
+    <groupId>us.bryon</groupId>
+    <artifactId>bryon-oss-parent</artifactId>
+    <version>1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>us.bryon Parent POM</name>
+    <description>
+        Maven POM to set common elements for us.bryon OSS projects.
+    </description>
+    <url>http://projects.bryon.us/</url>
+
+    <properties>
+        <java.source.version>1.6</java.source.version>
+        <java.target.version>1.6</java.target.version>
+        <text.encoding>UTF-8</text.encoding>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>New BSD License</name>
+            <url>http://www.opensource.org/licenses/bsd-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Bryon Jacob</name>
+            <email>bryon@jacobtx.net</email>
+            <timezone>-6</timezone>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:bryonjacob/bryon-oss-parent.git</connection>
+        <developerConnection>scm:git:git@github.com:bryonjacob/bryon-oss-parent.git</developerConnection>
+        <url>git@github.com:bryonjacob/bryon-oss-parent.git</url>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${java.source.version}</source>
+                    <target>${java.target.version}</target>
+                    <encoding>${text.encoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
